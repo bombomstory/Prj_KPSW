@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>เว็บไซต์สาขาวิชาวิทยาคอมพิวเตอร์และเทคโนโลยีสารสนเทศมหาวิทยาลัยกาฬสินธุ์</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            @keyframes fadeInUp {
+              from {
+                opacity: 0;
+                transform: translateY(30px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+            
+            .scroll-reveal {
+              opacity: 0;
+              transform: translateY(30px);
+              transition: all 0.6s ease-out;
+            }
+            
+            .scroll-reveal.active {
+              opacity: 1;
+              transform: translateY(0);
+              animation: fadeInUp 0.6s ease-out;
+            }
+
+            .card-elevated {
+              box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+              transition: box-shadow 0.3s ease, transform 0.3s ease;
+            }
+            
+            .card-elevated:hover {
+              box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16), 0 6px 16px rgba(0, 0, 0, 0.1) !important;
+              transform: translateY(-2px);
+            }
+
+            /* --- CSS สำหรับปุ่มประกาศผลกลางหน้า (เน้นสีแดงและแอนิเมชัน) --- */
+            @keyframes pulse-highlight {
+                0% {
+                    box-shadow: 0 0 0 0 rgba(255, 60, 60, 0.7);
+                }
+                70% {
+                    box-shadow: 0 0 0 15px rgba(255, 60, 60, 0);
+                }
+                100% {
+                    box-shadow: 0 0 0 0 rgba(255, 60, 60, 0);
+                }
+            }
+
+            .result-highlight-btn {
+                background-color: #ff3c3c !important; /* สีแดงโดดเด่น */
+                border-color: #cc0000 !important;
+                color: white !important;
+                font-weight: bold;
+                padding: 15px 30px;
+                font-size: 1.5rem;
+                border-radius: 50px; /* ทำให้ปุ่มโค้งมน */
+                animation: pulse-highlight 2s infinite;
+                transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .result-highlight-btn:hover {
+                background-color: #cc0000 !important;
+                animation: none; 
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+
+            .new-badge-center {
+                font-size: 0.8em;
+                background-color: #00ff00; /* สีเขียวนีออนสำหรับ NEW */
+                color: #333;
+                padding: 4px 8px;
+                border-radius: 6px;
+                margin-left: 8px;
+                vertical-align: top;
+                display: inline-block;
+                line-height: 1;
+            }
+            /* --- End CSS สำหรับปุ่มประกาศผลกลางหน้า --- */
+        </style>
+    </head>
+    <body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand d-flex align-items-center" href="#page-top">
+                <img src="assets/img/portfolio/fullsize/50.jpg" alt="" 
+                     style="height: 40px; margin-right: 10px;" />
+                มหาวิทยาลัยกาฬสินธุ์
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            เกี่ยวกับหลักสูตร
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="curriculum.html">หลักสูตร</a></li>
+                            <li><a class="dropdown-item" href="ksu_it_curriculum.html">รายละเอียดหลักสูตร</a></li>
+                            <li><a class="dropdown-item" href="ksu_it_curriculum_structure.html">โครงสร้างหลักสูตร</a></li>
+                            <li><a class="dropdown-item" href="career.html">อาชีพที่รองรับ</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ค่าธรรมเนียมและทุนการศึกษา
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="fee.html">ค่าธรรมเนียม</a></li>
+                            <li><a class="dropdown-item" href="scholarship.html">ทุนการศึกษา</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ข่าวสารและกิจกรรม
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="news.html">ข่าวสารและกิจกรรม</a></li>
+                            <li><a class="dropdown-item" href="gallery.html">ภาพกิจกรรม</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            นักศึกษา/ศิษย์เก่า
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="students.html">นักศึกษาปัจจุบัน</a></li>
+                            <li><a class="dropdown-item" href="alumni.html">ศิษย์เก่า</a></li>
+                            <li><a class="dropdown-item" href="student-projects.html">ผลงานนักศึกษา</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="teacher.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ข้อมูลอาจารย์
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="teacher.html">ข้อมูลอาจารย์</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            บริการวิชาการ
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="training-seminar.html">อบรมและบริการวิชาการ</a></li>
+                        </ul>
+                    </div> 
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ติดต่อเรา 
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="contact.html">ข้อมูลติดต่อสื่อสาร</a></li>
+                            <li><a class="dropdown-item" href="about-department.html">แผนที่การเดินทาง </a></li>
+                        </ul>
+                    </div>  
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="masthead">
+        <div id="promoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/img/portfolio/fullsize/11.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="กิจกรรม 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>🎓 ยินดีต้อนรับนักศึกษาใหม่</h5>
+                        <p>สาขาวิชาวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ มหาวิทยาลัยกาฬสินธุ์</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/portfolio/fullsize/07.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="กิจกรรม 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>💻 การแข่งขัน icdl </h5>
+                        <p>เปิดโอกาสให้นักศึกษาได้แสดงศักยภาพ</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/portfolio/thumbnails/10.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="กิจกรรม 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>ภาพกิจกรรมวันวิทยาศาสตร์จัดการแข่งขัน ROV</h5>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="scroll-reveal" style="background-color: transparent; text-align: center; padding: 2rem 0; margin: 2rem auto 0; max-width: min(90%, 100%);">
+        <a href="result.html" class="btn result-highlight-btn">
+            <i class="bi bi-trophy-fill"></i> ประกาศผลการแข่งขัน <span class="new-badge-center">NEW</span>
+        </a>
+    </section>
+    <section class="scroll-reveal card-elevated" style="background-color: #e1f5fe; padding: 2.5rem 0; text-align: center; margin: 2rem auto; max-width: min(90%, 100%); border-radius: 10px;">
+        <div style="padding: 0 1.5rem;">
+            <h1 style="font-size: clamp(1.5rem, 5vw, 2.5rem); font-weight: bold; margin-bottom: 1rem; color: #0277bd;">
+                📢 ประกาศรายชื่อโครงการที่เข้าร่วมการแข่งขัน
+            </h1>
+            <p style="font-size: clamp(1rem, 4vw, 1.3rem); margin-bottom: 1.5rem; line-height: 1.8; color: #01579b;">
+                <strong>Health-Tech Pioneer Hackathon สร้างสรรค์นวัตกรรม AI เพื่อสุขภาพ</strong><br>
+            </p>
+            <hr style="border-color: rgba(2, 119, 189, 0.2); margin: 1.5rem auto; width: 80%; max-width: 300px;">
+            <p style="font-size: clamp(0.9rem, 3.5vw, 1.1rem); margin-bottom: 1rem; color: #01579b;">
+                <strong>คณะวิทยาศาสตร์และเทคโนโลยีสุขภาพ</strong><br>
+                มหาวิทยาลัยกาฬสินธุ์
+            </p>
+            <p style="font-size: clamp(0.9rem, 3.5vw, 1.1rem); color: #01579b; margin-bottom: 1.5rem;">
+                📅 <strong>แข่งขันวันที่</strong> 27 พฤศจิกายน 2568<br>
+                📍 ณ คณะวิทยาศาสตร์และเทคโนโลยีสุขภาพ (พื้นที่นามน)<br>
+                มหาวิทยาลัยกาฬสินธุ์
+            </p>
+        </div>
+    </section>
+
+    <section class="scroll-reveal card-elevated" style="background-color: #e1f5fe; padding: 2rem; margin: 2rem auto; max-width: min(90%, 100%); border-radius: 10px;">
+        <div class="container px-4 px-lg-5">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 style="color: #0277bd; margin-bottom: 1.5rem; font-weight: bold;"> รายชื่อโครงการที่เข้าร่วมการแข่งขัน  Health-Tech Pioneer Hackathon</h2>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <a href="https://drive.google.com/file/d/1It9jZ7foascE-yqE1Q7v14O9u75gulXf/view" target="_blank" class="btn btn-primary btn-lg" style="font-weight: bold; padding: 14px 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(2, 119, 189, 0.3); transition: all 0.3s ease;">
+                        📋 ดูรายชื่อผู้แข่งขัน
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-top: 2rem; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <iframe 
+                    src="https://drive.google.com/file/d/1It9jZ7foascE-yqE1Q7v14O9u75gulXf/preview" 
+                    width="100%" 
+                    height="480" 
+                    allow="autoplay">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section" id="about" style="background-color: #90e0ef;">
+  <div class="container px-4 px-lg-5">
+    <div class="row text-start">
+      <div class="col-lg-4 mb-4 border-end">
+        <h3>📌 เส้นทางอาชีพเด่นหลังเรียนจบ</h3>
+        <ul>
+          <li>💻 นักพัฒนาซอฟต์แวร์ / โปรแกรมเมอร์</li>
+          <li>🌐 นักพัฒนาเว็บไซต์ และแอปพลิเคชัน</li>
+          <li>🔐 ผู้เชี่ยวชาญด้าน Cybersecurity และ AI</li>
+          <li>📡 วิศวกรเครือข่าย และ IT Support</li>
+          <li>👨‍🏫 อาจารย์ / นักวิชาการคอมพิวเตอร์</li>
+          <li>🚀 ฟรีแลนซ์ / เจ้าของกิจการด้านเทคโนโลยี</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 mb-4 border-end px-4">
+        <h3>✅ ความเชี่ยวชาญในหลักสูตร</h3>
+        <ol>
+          <li>
+            <strong>Medical Information Technology</strong><br>
+            กลุ่มเทคโนโลยีสารสนเทศทางการแพทย์ ได้แก่ แอปพลิเคชันทางการแพทย์, ระบบเวชระเบียน, ระบบสารสนเทศและฐานข้อมูลการแพทย์
+          </li>
+          <li class="mt-3">
+            <strong>Data Science and Medical AI</strong><br>
+            กลุ่มวิทยาการข้อมูลและปัญญาประดิษฐ์ทางการแพทย์ ได้แก่ ปัญญาประดิษฐ์, วิทยาศาสตร์ข้อมูล, การประมวลผลภาพทางการแพทย์
+          </li>
+        </ol>
+      </div>
+
+      <div class="col-lg-4 mb-4 px-4">
+        <h3>🌟 จุดเด่นของหลักสูตร</h3>
+        <ul>
+          <li>📚 เรียนในมหาวิทยาลัย 3 ปี</li>
+          <li>🤝 เรียนร่วมกับสถานประกอบการ</li>
+          <li>💼 มีงานรองรับ ทั้งภาคเอกชนและราชการ</li>
+          <li>🎓 มีทุนการศึกษาให้เปล่า</li>
+          <li>💰 ทุนกู้ยืมเพื่อการศึกษา (กยศ.)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-4 text-center">
+        <a class="btn btn-light btn-xl" href="career-path.html">ลายละเอียดเพิ่มเติม</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="page-section" id="services">
+  <div class="container px-4 px-lg-5">
+    <h2 class="text-center mt-0">ภาพกิจกรรมในสาขา</h2>
+    <hr class="divider" />
+    <div class="row gx-4 gx-lg-5">
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="mt-5">
+          <img src="assets/img/portfolio/fullsize/11.jpg" alt="ภาพกิจกรรมช่วง"แกล้งน้อง"เฮ้ย! รับน้อง" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+          <h3 class="h5 mt-3 mb-2">ภาพกิจกรรมช่วง"แกล้งน้อง"เฮ้ย! รับน้อง</h3>
+          <p class="text-muted mb-0">#MIT24 #เทคโนโลยีสารสนเทศทางการแพทย์</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="mt-5">
+          <img src="assets/img/portfolio/fullsize/22.jpg" alt="การแข่งขันเขียนโปรแกรม" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+          <h3 class="h5 mt-3 mb-2">✨ปฐมนิเทศนักศึกษาใหม่✨</h3>
+          <p class="text-muted mb-0">สาขาวิทยาการคอมพิวเตอร์ และเทคโนโลยีสารสนเทศ ประจำปีการศึกษา 2567 MIT รุ่นที่ 24</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="mt-5">
+          <img src="assets/img/portfolio/fullsize/33.jpg" alt="ไหว้ครูสาขา2566" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+          <h3 class="h5 mt-3 mb-2">ไหว้ครูสาขา2566</h3>
+          <p class="text-muted mb-0">วันที่ 13 กรกฎาคม 2566 
+บรรยากาศการไหว้ครู ของสาขาวิทยาการสารสนเทสและคอมพิวเตอร์  กับหลักสูตรเทคโนโลยีสารสนเทศทางการแพทย์ (วท.บ.)  ณ ลานชั้น 1 อาคารสำนักงานคณบดี 
+</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="mt-5">
+          <img src="assets/img/portfolio/fullsize/44.jpg" alt="ร่วมทำบุญเนื่องในวันมาฆบูชา ณ พุทธสถานภูปอ" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+          <h3 class="h5 mt-3 mb-2">ร่วมทำบุญเนื่องในวันมาฆบูชา ณ พุทธสถานภูปอ</h3>
+          <p class="text-muted mb-0">อาจารย์และนักศึกษาสาขาเทคโนโลยีสารสนเทศฯ ร่วมทำบุญเนื่องในวันมาฆบูชา ณ พุทธสถานภูปอ</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <div id="portfolio">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/06.jpg" title="รูปกิจกรรม">
+                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/06.jpg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">กิจกรรมชมรม</div>
+                            <div class="ROV">ROV</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="รูปกิจกรรม">
+                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">โครงการสัมมนาและนำเสนอผลงานสหกิจศึกษา สาขาวิชาวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ ประจำปีการศึกษา ๒๕๖๗ </div>
+                            <div class="project-name">ยินดีกับพี่ ๆ ปี 4 ที่ออกฝึกสหกิจศึกษากับบริษัทชั้นนำของประเทศ และบริษัทได้ตอบรับให้ทำงานต่อทันที สาขา DSD ได้ทำงานทุกคน 100% และสาขา IT ได้ทำงาน 60% ชี้ให้เห็นว่าบัณฑิตที่สำเร็จการศึกษามีคุณภาพ</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="รูปกิจกรรม">
+                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/21.jpg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">ชมรมกีฬาอีสปอร์ต</div>
+                            <div class="project-name">จัดแข่งขันคัดเลือกนักกีฬาอีสปอร์ต ประจำปี 2567 เพื่อเป็นตัวแทนแข่งในระดับภาค และในระดับประเทศ </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="รูปกิจกรรม">
+                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/31.jpg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">โครงการบริการวิชาการค่ายหุ่นยนต์และปัญญาประดิษฐ์ ณ โรงเรียนเขาวงพิทยาคาร </div>
+                            <div class="project-name">เพื่อสร้างความรู้ความเข้าใจพื้นฐานเกี่ยวกับหุ่นยนต์และปัญญาประดิษฐ์ให้กับนักเรียน ส่งเสริมให้นักเรียนได้เรียนรู้และฝึกฝนทักษะด้านหุ่นยนต์และปัญญาประดิษฐ์ และเพื่อกระตุ้นให้นักเรียนมีความสนใจและอยากศึกษาต่อในสาขาที่เกี่ยวข้อง</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="รูปกิจกรรม">
+                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/41.jpg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">1 ธค 2566 ณ โรงเรียนคำชะอึ จังหวัดมุกดาหาร</div>
+                            <div class="project-name">อาจารย์นำพานักศึกษาชั้นปีที่ 2 หลักสูตรเทคโนโลยีสารสนเทศ เข้าให้ความรู้ด้าน IOT และ เทคโนโลยี VR กับน้อง ๆ </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="รูปกิจกรรม">
+                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/51.jpg" alt="..." />
+                        <div class="portfolio-box-caption p-3">
+                            <div class="project-category text-white-50">SHT Academy ครั้งที่ 1</div>
+                            <div class="project-name">ยินดีกับพี่ๆ ชั้นปีที่ 4 ได้รับเกียรติบัตร นำเสนอดีเด่น ในเวทีนำเสนองาน SHT Academy ครั้งที่ 1 </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="highlight">
+      <h3></h3>
+      <p>อาคารวิทยาศาสตร์ คณะวิทยาศาสตร์ มหาวิทยาลัยกาฬสินธุ์<br>
+      เลขที่ 13 ถนนถีนานนท์ ตำบลกาฬสินธุ์ อำเภอเมือง จังหวัดกาฬสินธุ์ 46000</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.389768997795!2d103.4984711152336!3d16.432944688642267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x312269c9a43dcdfd%3A0x9c0f3fa9c4d3c623!2z4Lit4LiH4LmA4Lit4LmJ4Liy4LiE4Li44Lij4LmM4Lih4LmA4Lil4Lix4LiZ4LiE4Lij4LmM4Lih4Liy4Lil4LiB4Lil4LmJ4Lit4LiH4LmA4LiX4Lil4Lix4Liq4LmA4Lit4Liq4Lih4LiE4LmB4Liy4Lij4LmM4LiK!5e0!3m2!1sth!2sth!4v1691224087357!5m2!1sth!2sth"
+        width="100%"
+        height="400"
+        style="border:0; border-radius: 8px; margin-top: 1rem;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+           <div class="contact-info" style="max-width: 700px; margin: 2rem auto; font-family: 'Kanit', sans-serif; background: #e0f7ff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+  <h2 style="color: #0077b6; text-align: center; margin-bottom: 1rem;">ข้อมูลติดต่อสาขาวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ</h2>
+  <ul style="list-style-type: none; padding: 0; font-size: 1.1rem; color: #023e8a;">
+    <li><strong>เว็บไซต์หลักของสาขา:</strong> <a href="https://sht.ksu.ac.th/สาขาวิชาวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ/" target="_blank" style="color: #0077b6; text-decoration: none;">https://sht.ksu.ac.th/สาขาวิชาวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ/</a></li>
+    <li><strong>Facebook:</strong> <a href="https://www.facebook.com/ITCS.KSU.AC.TH/?locale=th_TH" target="_blank" style="color: #0077b6; text-decoration: none;">https://www.facebook.com/ITCS.KSU.AC.TH</a></li>
+    <li><strong>โทรศัพท์:</strong> <a href="tel:043602057" style="color: #0077b6; text-decoration: none;">043-602057</a></li>
+  </ul>
+</div>
+        
+    </section>
+    <footer class="bg-light py-5">
+        <div class="container px-4 px-lg-5"><div class="small text-center text-muted">  © 2025 - สาขาวิชาวิทยาคอมพิวเตอร์และเทคโนโลยีสารสนเทศมหาวิทยาลัยกาฬสินธุ์</div></div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+      // Intersection Observer สำหรับ Scroll Reveal
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, observerOptions);
+      
+      // เพิ่ม observer ให้กับองค์ประกอบที่มี class scroll-reveal
+      document.querySelectorAll('.scroll-reveal').forEach(el => {
+        observer.observe(el);
+      });
+    </script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>
